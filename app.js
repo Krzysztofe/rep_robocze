@@ -195,7 +195,7 @@ const btn = document.querySelector("button");
 const temp = document.getElementById("tbodtyTemplate");
 const td = document.querySelectorAll("td");
 console.log("", btn);
-const text = "pp" 
+const text = "ppyy" 
 
 
   const all = temp.content.cloneNode(true);
