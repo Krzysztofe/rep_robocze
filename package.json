@@ -1,0 +1,20 @@
+{
+  "name": "rep-robocze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "compile": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krzysztofe/robocze.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krzysztofe/robocze/issues"
+  },
+  "homepage": "https://github.com/Krzysztofe/robocze#readme"
+}
