@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <li>
+        <ul>
+          <a href="/todo/todo.html">to do</a>
+        </ul>
+        <ul>
+          <a href="/voting/voting.html">voting</a>
+        </ul>
+        <ul>
+          <a href="/books/books.html">books</a>
+        </ul>
+      </li>
+    </header>
+    <form id="form">
+      <label for="">tytuł</label>
+      <input type="text" id="title" />
+      <label for="">autor</label>
+      <input type="text" id="author" />
+      <label for="">rok</label>
+      <input type="number" id="year" />
+      <button type="submit" id="btnBook">zapisz</button>
+    </form>
+
+    <form id="form2">
+      <label for="">wyszukaj</label>
+      <input type="text" id="search" />
+      <button>zapisz</button>
+    </form>
+    <div id="result"></div>
+    <script src="books.js"></script>
+  </body>
+</html>

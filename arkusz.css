@@ -1,28 +1,70 @@
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+  height: 100vh;
+  /* background-color: rgba(255, 0, 0, 0.6); */
+}
+.topSection {
+  height: 50%;
 }
 
-html {
-  font-size: 62.5%;
+.sesctionSecond {
+  height: 100%;
 }
 
-#tbodtyTemplate {
-  border: 1px solid black;
+.squaresContainer {
+  margin-block: 100px;
+  display: flex;
+  justify-content: space-between;
 }
 
-tr {
-  border: 1px solid black;
-  color: red;
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: 0.5s;
+  position: relative;
 }
 
-td{
-      color: red;
+/* .square:hover {
+  background-color: black;
+} */
+
+.square:hover + .inside {
+  background-color: blue; /* Change to the desired background color */
 }
-table{
-    border: 5px solid black;
-    
+.inside {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
+
+.tooltip {
+  width: 90%;
+  height: 20px;
+  background-color: blue;
+  position: absolute;
+  top: -45%;
+  text-align: center;
+  animation: yy;
+  animation-duration: 2;
+}
+
+@keyframes yy {
+  0% {
+    scale: 10%;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.tooltip::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  background-color: blue;
+  bottom: -14%;
+  left: 10%;
+  transform: rotate(45deg);
+  z-index: -1;
 }

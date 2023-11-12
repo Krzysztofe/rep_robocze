@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div {
+  width: 15%;
+  flex-grow: 1;
+  height: 33.33vh;
+  background-color: red;
+  border: 1px solid white;
+}
+
+@media (orientation: portrait) {
+  div {
+    width: 30%;
+    height: 16.66vh;
+  }
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.yellowgreen {
+  background-color: yellowgreen;
+}
+.grey {
+  background-color: grey;
+}
+.green {
+  background-color: green;
+}
+.greenyellow {
+  background-color: greenyellow;
+}
+.orange {
+  background-color: orange;
+}
+.black {
+  background-color: black;
+}
+.purple {
+  background-color: purple;
+}
+.violet {
+  background-color: violet;
+}
+.firebrick {
+  background-color: firebrick;
+}
+.aqua {
+  background-color: aqua;
+}
+.lightblue {
+  background-color: lightblue;
+}
+.lightslategray {
+  background-color: lightslategray;
+}
+.gold {
+  background-color: gold;
+}
+.saddlebrown {
+  background-color: saddlebrown;
+}
+.burlywood {
+  background-color: burlywood;
+}
+
+.hidden {
+  background-color: rgba(0, 0, 0, 0.2);
+}

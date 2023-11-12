@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>glosowanie</h1>
+    <form style="display: flex; flex-direction: column; gap: 20px" class="form">
+      <label>
+        nzwa użytkowanika
+        <input type="text" class="userName" autofocus />
+      </label>
+      <label>
+        identyfikator
+        <input type="text" class="userId"  />
+      </label>
+
+      <select class="select">
+        <option value="opcja 1">TAK</option>
+        <option value="opcja 2">NIE</option>
+        <option value="opcja 3">Precz</option>
+      </select>
+      <button>zapisz</button>
+    </form>
+    <ul class="results"></ul>
+    <script src="voting.js"></script>
+  </body>
+</html>
