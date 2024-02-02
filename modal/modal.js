@@ -1,8 +1,11 @@
-const body = document.querySelector("body");
-const modalFirst = document.getElementById("modalFirst");
-const modalSecond = document.getElementById("modalSecond");
-const modalContainer = document.querySelector(".modalContainer");
-// const modal__icon = document.querySelector(".modalContainer");
+const [body, modalContainer] = ["body", "modalContainer"].map(item => {
+  return document.querySelector(item);
+});
+
+const [modalFirst, modalSecond] = ["modalFirst", "modalSecond"].map(item => {
+  return document.getElementById(item);
+});
+
 
 const modal = `
 <div class="modal" tabindex = "10">
@@ -51,9 +54,3 @@ const removeModal = e => {
 };
 
 modalFirst.addEventListener("click", createModal);
-
-
-const gg = "55.66"
-const yu = parseFloat(gg)
-
-console.log('',yu)

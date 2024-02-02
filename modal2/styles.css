@@ -1,0 +1,70 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 1rem;
+  background-color: lightblue;
+}
+
+.main {
+  display: flex;
+}
+
+.aside {
+  background-color: lightcyan;
+  height: 100vh;
+}
+
+.sidebarlist {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.section {
+  background-color: lightyellow;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.cart {
+  max-width: 25%;
+  flex-grow: 1;
+  border: 1px solid black;
+  margin: 3px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-inline: auto;
+}
+
+.photo {
+  width: 100px;
+  height: 150px;
+  margin-inline: auto;
+
+  background-color: grey;
+}
+
+.name {
+  color: blue;
+}
+
+.price {
+  /* margin-top: auto; */
+}
+
+.button {
+  margin-top: auto;
+}
