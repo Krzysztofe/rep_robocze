@@ -43,20 +43,16 @@ squares.forEach(square => {
   });
 });
 
-class Ala {
-  constructor(name, surname) {
-    this.name = name;
-    this.surname = surname;
-  }
-  year = 10;
-  atak(){
-    console.log('yo',)
-    this.year = this.name - 2
-  }
-}
+const yy = first => {
+  const xx = [...first];
 
-const newAla = new Ala("20", "ll");
-newAla.atak()
+  const bb = xx.map(x => +x);
 
+  const isNan = bb.includes(NaN);
+  const length = first.length;
 
-console.log("", newAla);
+  const result = !isNan && (length === 4 || length === 6);
+
+  return result;
+};
+console.log("", yy("123"));

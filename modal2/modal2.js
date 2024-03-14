@@ -5,13 +5,15 @@ const input = document.querySelector("input");
 const sum = document.getElementById("summ");
 const deletex = document.getElementById("delete");
 
+
 let summ = null;
 
 const addItem = e => {
   const data = e.target.dataset.price;
-
-  summ += parseInt(data);
-  sum.innerText = summ;
+  if (e.target.className === "but") {
+    summ += parseInt(data);
+    sum.innerText = summ;
+  }
 };
 
 const deleteSumm = () => {
@@ -33,7 +35,7 @@ const cartPattern = phone => {
         `;
 };
 
-const createCarts = list => {
+const createCarts = (list, e = "") => {
   section.innerHTML = "";
   list.forEach(phone => {
     const cart = document.createElement("div");
@@ -41,11 +43,9 @@ const createCarts = list => {
     cart.innerHTML = cartPattern(phone);
     section.append(cart);
   });
-  const btnsCart = document.querySelectorAll("button");
-  btnsCart?.forEach(btn => {
-    btn.addEventListener("click", addItem);
-  });
 };
+
+section.addEventListener("click", addItem);
 
 const search = e => {
   const searchCategory = e.target.dataset.category;
@@ -57,7 +57,7 @@ const search = e => {
     return category === searchCategory;
   });
 
-  return createCarts(filtered);
+  return createCarts(filtered, e);
 };
 
 const createlist = list => {
@@ -94,7 +94,6 @@ const init = list => {
 };
 
 document.onload = init(phones);
-
 
 let curElementNumber = 0;
 

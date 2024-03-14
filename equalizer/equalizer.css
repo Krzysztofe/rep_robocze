@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.equalizer-column {
+  width: 20px;
+  height: 100px;
+  background-color: #ccc;
+  margin: 0 5px;
+}

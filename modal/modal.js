@@ -6,7 +6,6 @@ const [modalFirst, modalSecond] = ["modalFirst", "modalSecond"].map(item => {
   return document.getElementById(item);
 });
 
-
 const modal = `
 <div class="modal" tabindex = "10">
         <div class="modal__header">tytul</div>
@@ -51,6 +50,10 @@ const removeModal = e => {
     document.querySelector(".modalContainer")?.remove();
     body.style.overflow = "auto";
   }
+  // e.stopPropagation();
+  document.querySelector(".modalContainer")?.remove();
+  body.style.overflow = "auto";
+
 };
 
 modalFirst.addEventListener("click", createModal);
