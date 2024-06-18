@@ -55,4 +55,3 @@ const yy = first => {
 
   return result;
 };
-console.log("", yy("123"));
