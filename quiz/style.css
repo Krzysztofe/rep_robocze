@@ -1,0 +1,27 @@
+.belt {
+  height: 20px;
+}
+
+.name {
+  transform: translateY(-500px);
+  position: absolute;
+}
+
+.animation {
+  animation: moveDown 3s;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-500px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-500px);
+  }
+}
