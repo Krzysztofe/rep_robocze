@@ -25,3 +25,63 @@
     transform: translateY(-500px);
   }
 }
+
+/* belt horizontal */
+
+.beltContainer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+.beltHorizontal {
+  display: flex;
+  /* animation: slide 4s linear forwards infinite; */
+  border: 1px solid black;
+}
+
+.car {
+  margin-inline: 3rem;
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.graphic-container {
+  background-image: url("../images/unnamed.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.graphic {
+  width: 200px;
+  height: 200px;
+  mask-image: url("/images/clock-two-thirty-svgrepo-com.svg");
+  mask-size: contain;
+  background-color: red;
+}
+
+.tooltip {
+  opacity: 0;
+  transition: 1s;
+}
+
+.graphic:hover + .tooltip {
+  opacity: 1;
+}
+
+.divWithPseudo {
+  background-color: gray;
+}
+
+.divWithPseudo:before {
+  content: "uuu";
+  display: block;
+  opacity: 0;
+}
+.divWithPseudo:hover::before{
+  opacity: 1;
+}

@@ -42,6 +42,31 @@ class Quiz {
 const tt = new Quiz(data);
 tt.displayQuestions();
 
+// vartical belt
+const nameElems = document.querySelectorAll(".name");
+
+const printName = nameEl => {
+  nameElems.forEach(el => el.classList.remove("animation"));
+  nameEl.classList.add("animation");
+};
+
+const handlePrintName = () => {
+  let currentIndex = 0;
+
+  setInterval(() => {
+    printName(nameElems[currentIndex]);
+    currentIndex = (currentIndex + 1) % nameElems.length;
+  }, 4000);
+};
+
+window.addEventListener("load", handlePrintName);
+
+// horizontal animation
+
+const beltContainerEl = document.querySelector(".beltContainerInterval");
+
+
+
 const timerEl = document.getElementById("timer");
 const timeEendEl = document.getElementById("timerEnd");
 const timePrint = document.getElementById("timePrint");
@@ -64,6 +89,8 @@ const handleTimerEnd = () => {
 
 timerEl.addEventListener("click", handleTimerStart);
 timeEendEl.addEventListener("click", handleTimerEnd);
+
+// ptint timeout
 const divEL = document.createElement("div");
 
 const print = () => {
@@ -78,27 +105,3 @@ const clear = () => {
 
 setTimeout(print, 2000);
 setTimeout(clear, 5000);
-
-const nameElems = document.querySelectorAll(".name");
-
-// Function to print name
-const printName = nameEl => {
-  nameElems.forEach(el => el.classList.remove("animation"));
-  nameEl.classList.add("animation");
-};
-
-// Function to handle the print name action
-const handlePrintName = () => {
-  let currentIndex = 0;
-
-  // console.log('',currentIndex)
-
-  setInterval(() => {
-    printName(nameElems[currentIndex]);
-    currentIndex = (currentIndex + 1) % nameElems.length;
-      console.log("", currentIndex);
-  }, 4000);
-};
-
-// Add event listener for the window load event
-window.addEventListener("load", handlePrintName);
