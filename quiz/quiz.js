@@ -65,8 +65,6 @@ window.addEventListener("load", handlePrintName);
 
 const beltContainerEl = document.querySelector(".beltContainerInterval");
 
-
-
 const timerEl = document.getElementById("timer");
 const timeEendEl = document.getElementById("timerEnd");
 const timePrint = document.getElementById("timePrint");
@@ -105,3 +103,20 @@ const clear = () => {
 
 setTimeout(print, 2000);
 setTimeout(clear, 5000);
+
+const colorList = {
+  biały: "#e6dfdf",
+  czerwony: "#d91515",
+  niebieski: "#2a4cd3",
+};
+
+const colorsElems = [...document.querySelectorAll(".color")];
+
+for (const colorEl of colorsElems) {
+  const colorName = colorEl.textContent.toLocaleLowerCase();
+
+  if (colorList[colorName]) {
+    colorEl.style.color = colorList[colorName];
+  }
+}
+

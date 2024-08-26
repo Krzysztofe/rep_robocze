@@ -50,10 +50,27 @@
   }
 }
 
+.section__graphic {
+  background-color: red;
+}
+
 .graphic-container {
   background-image: url("../images/unnamed.png");
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+.graphic-container:before {
+  content: "";
+  top: 1.25rem;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+}
+
+.graphic-container:hover {
+  opacity: 0.5;
 }
 
 .graphic {
@@ -62,6 +79,15 @@
   mask-image: url("/images/clock-two-thirty-svgrepo-com.svg");
   mask-size: contain;
   background-color: red;
+}
+
+.graphic__text {
+  position: absolute;
+  display: block;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  color: red;
 }
 
 .tooltip {
@@ -82,6 +108,6 @@
   display: block;
   opacity: 0;
 }
-.divWithPseudo:hover::before{
+.divWithPseudo:hover::before {
   opacity: 1;
 }
