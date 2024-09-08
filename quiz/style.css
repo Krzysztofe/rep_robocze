@@ -111,3 +111,8 @@
 .divWithPseudo:hover::before {
   opacity: 1;
 }
+
+.close{
+display: none;
+background-color: lightgray;
+}

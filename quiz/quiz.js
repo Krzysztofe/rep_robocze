@@ -120,3 +120,15 @@ for (const colorEl of colorsElems) {
   }
 }
 
+const printEls =[...document.querySelectorAll(".print")]
+
+printEls.forEach(printEl => {
+  printEl.addEventListener("click", () => {
+    if (!printEl.classList.contains("close")) {
+      console.log('',printEl)
+      printEl.classList.add("close");
+    }else{
+        printEl.classList.remove("close");
+    }
+  });
+});
