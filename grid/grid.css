@@ -1,0 +1,54 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+
+ 
+
+}
+ @media (max-width: 500px) {
+    .container{
+        color: red;
+    }
+  }
+
+button {
+  display: block;
+  margin-left: auto;
+  grid-column: span 2;
+}
+
+
+.svg::after {
+  content:"";
+ display: block;
+ width: 3rem;
+ height: 3rem;
+ mask: url("../images/magnifying-glass-solid.svg");
+ background-color: red;
+}
+
+.dropdown {
+  padding: 2rem;
+  margin: 2rem;
+  background-color: grey;
+  display: grid;
+  grid-template-rows: 0fr;
+   transition: 1s;
+  
+}
+
+.dropdown > div{
+
+overflow: hidden;
+}
+
+.dropdown:hover {
+  grid-template-rows: 1fr;
+}

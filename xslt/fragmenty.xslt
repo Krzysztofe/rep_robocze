@@ -20,7 +20,7 @@
 <!-- literal -->
 
               <div class="product__promotion">
-                     <iai:variable class="product__promotion" vid="PROMOCJA"/>
+                     <iai:variable vid="PROMOCJA"/>
               </div>
 
 <!-- warunek -->
@@ -28,7 +28,7 @@
                 <iaixsl:text disable-output-escaping="yes"><![CDATA[ rel="nofollow"]]></iaixsl:text>
      </iaixsl:if>
 
-<!-- dodawanie parametrów do elementu  -->
+<!-- dodawanie atrybutów do elementu  -->
        <div class="product__buy-section" data-id="67186">
            <iaixsl:attribute name="data-id">
                 <iaixsl:value-of select="@id"></iaixsl:value-of>
@@ -47,6 +47,34 @@
  <iaixsl:if test="page/@type != 'login'">
 
    </iaixsl:if>
+
+<!-- dowawanie klasy -->
+
+   		<iaixsl:attribute name="class"> <![CDATA[eeeeee]]></iaixsl:attribute>
+
+
+<!-- dodawanie klasy warunkowo -->
+
+ <iaixsl:if test="language/@id = 'pol'">
+     <iaixsl:attribute name="class"><![CDATA[conditionClass]]></iaixsl:attribute>
+ </iaixsl:if>
+
+
+
+<!-- petla -->
+
+        		<iaixsl:for-each select="/shop/oneclick/payment">		</iaixsl:for-each>
+
+
+<!-- choose   -->
+                	<iaixsl:choose>
+							<iaixsl:when test="/shop/page/@price_type = 'net'">
+								<iaixsl:value-of disable-output-escaping="yes" select="basket/@cost_net_formatted"/>
+							</iaixsl:when>
+							<iaixsl:otherwise>
+								<iaixsl:value-of disable-output-escaping="yes" select="basket/@cost_formatted"/>
+							</iaixsl:otherwise>
+					</iaixsl:choose>
 
 
       <iaixsl:when test="page/@type = 'login'">

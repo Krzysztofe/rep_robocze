@@ -66,3 +66,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
   downloadLink.addEventListener("click", downloadFile);
 });
+
+const menuEl = document.querySelector(".mobileCategories__link.menuBtn");
+const htmlEl = document.documentElement;
+
+const closeMenuBM = e => {
+  const target = e.target;
+  console.log(menuEl);
+  menuEl.classList.toggle("opened");
+  if (menuEl.classList.contains("opened")) {
+    htmlEl.classList.remove("sidebar_open");
+  }
+  console.log(target);
+};
+
+menuEl.addEventListener("click", closeMenuBM);
+
